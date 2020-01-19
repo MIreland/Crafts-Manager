@@ -1,0 +1,13 @@
+.image {
+	background-color: rgb(255, 226, 226);
+	height: 50px;
+	width: 50px;
+}
+
+body {
+	margin-left: 10px;
+	margin-top: 25px;
+}
+.form {
+	margin-bottom: 15px;
+}
