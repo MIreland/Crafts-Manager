@@ -430,13 +430,13 @@ class Threads extends React.Component {
 
 	render() {
 		return (
-			<div style={userStyle}>
+			<div style={threadCardStyle}>
 				{this.state.threads.map((thread) => <ThreadItem key={thread.dmc} thread={thread} />)}
 			</div>
 		);
 	}
 }
-const userStyle = {
+const threadCardStyle = {
 	display: 'grid',
 	gridTemplateColumns: 'repeat(4, 1fr)',
 	gridGap: '1rem'

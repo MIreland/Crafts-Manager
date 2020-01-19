@@ -16,12 +16,6 @@ const ThreadItem = (props) => {
 					</div>
 				</div>
 			</div>
-			{/* <h2>{dmc}</h2>
-			<h3>{color}</h3>
-			<h5>{rgb}</h5>
-			{/* <a href={html_url} className="btn btn-dark btn=sm my-1">
-					More
-				</a> */}
 		</div>
 	);
 };
