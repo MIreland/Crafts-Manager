@@ -1,25 +1,29 @@
 import React from 'react';
-
-// import cottageFairy from './images/cottageFairy.jpg';
-// import fairyFlora from './images/fairyFlora.jpg';
-// import midsummerNightsFairy from './images/midsummerNightsFairy.jpg';
-// import gypsyQueen from './images/gypsyQueen.jpg';
+import PatternItem from './PatternItem';
+import cottageFairy from './images/cottageFairy.jpg';
 import gypsy from './images/gypsy2.jpg';
 import geranium from './images/geranium.jpg';
 import unicorn from './images/unicorn2.png';
 
 const OtherPatterns = (props) => {
-	let patterns = [ geranium, unicorn, gypsy ];
-	var patternList = patterns.map(function(pattern) {
-		return (
-			<img
-				src={pattern}
-				key={pattern}
-				style={{ height: '15%', width: '15%', border: '5px solid darkgrey' }}
-				alt="pattern"
-			/>
-		);
-	});
-	return patternList;
+	let patterns = [
+		{ image: geranium, name: 'Geranium', by: 'Mirabilia' },
+		{ image: unicorn, name: 'Unicorn', by: 'other' },
+		{ image: gypsy, name: 'Gypsy', by: 'Mirabilia' },
+		{ image: cottageFairy, name: 'CottageFairy', by: 'Mirabilia' }
+	];
+	return (
+		<div style={threadCardStyle}>
+			{patterns.map((pattern) => {
+				return <PatternItem key={pattern.name} name={pattern.name} by={pattern.by} image={pattern.image} />;
+			})}
+		</div>
+	);
+};
+
+const threadCardStyle = {
+	display: 'grid',
+	gridTemplateColumns: 'repeat(2, 5fr)',
+	gridGap: '1rem'
 };
 export default OtherPatterns;

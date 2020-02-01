@@ -1,4 +1,5 @@
 import React from 'react';
+import PatternItem from './PatternItem';
 
 import dragonfly2 from './images/dragonfly2.jpg';
 import gothic from './images/gothic.jpg';
@@ -14,31 +15,32 @@ import portager2 from './images/portager2.jpg';
 import watergarden2 from './images/watergarden2.jpg';
 
 const ChatelainePatterns = (props) => {
-	let images = [
-		dragonfly2,
-		granada2,
-		gothic,
-		herbularus2,
-		hortager,
-		hummingbird2,
-		hydrangea2,
-		miniTuscany,
-		mossGarden2,
-		portager2,
-		watergarden2
+	let patterns = [
+		{ image: dragonfly2, name: 'Dragonfly', by: 'Chatelaine' },
+		{ image: granada2, name: 'Granada', by: 'Chatelaine' },
+		{ image: gothic, name: 'Gothic', by: 'Chatelaine' },
+		{ image: herbularus2, name: 'Herbularus', by: 'Chatelaine' },
+		{ image: hummingbird2, name: 'Hummingbird', by: 'Chatelaine' },
+		{ image: miniTuscany, name: 'Mini Tuscany', by: 'Chatelaine' },
+		{ image: mossGarden2, name: 'Moss Garden', by: 'Chatelaine' },
+		{ image: portager2, name: 'Portager', by: 'Chatelaine' },
+		{ image: watergarden2, name: 'Watergarden', by: 'Chatelaine' },
+		{ image: hortager, name: 'Hortager', by: 'Chatelaine' },
+		{ image: hydrangea2, name: 'Hydrangea', by: 'Chatelaine' }
 	];
 
-	var imageList = images.map(function(image) {
-		return (
-			<img
-				src={image}
-				key={image}
-				style={{ height: '20%', width: '20%', border: '1px solid darkgrey' }}
-				alt="pattern"
-			/>
-		);
-	});
-	return imageList;
+	return (
+		<div style={threadCardStyle}>
+			{patterns.map((pattern) => {
+				return <PatternItem key={pattern.name} name={pattern.name} by={pattern.by} image={pattern.image} />;
+			})}
+		</div>
+	);
+};
+const threadCardStyle = {
+	display: 'grid',
+	gridTemplateColumns: 'repeat(2, 5fr)',
+	gridGap: '1rem'
 };
 export default ChatelainePatterns;
 

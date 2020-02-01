@@ -3,14 +3,14 @@ import React from 'react';
 const SearchBar = () => {
 	return (
 		<div className="ui three item menu">
-			<a href="/" className="active item">
-				DMC Threads
+			<a href="/" className="item">
+				<h1>Threads</h1>
 			</a>
 			<a href="/" className="item">
-				Silk Threads
+				<h1>Patterns</h1>
 			</a>
 			<a href="/" className="item">
-				Projects
+				<h1>Projects</h1>
 			</a>
 		</div>
 	);
