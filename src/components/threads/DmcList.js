@@ -435,11 +435,3 @@ const threadCardStyle = {
 	gridGap: '1rem'
 };
 export default DmcList;
-// 	return (
-// 		<div style={threadCardStyle}>
-// 			{threads.map((thread, i) => {
-// 				return <ThreadItem key={i} dmc={threads[i].dmc} color={threads[i].color} rgb={threads[i].rgb} />;
-// 			})}
-// 		</div>
-// 	);
-// };
