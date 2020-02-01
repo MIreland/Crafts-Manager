@@ -43,12 +43,3 @@ const threadCardStyle = {
 	gridGap: '1rem'
 };
 export default ChatelainePatterns;
-
-// {
-// 	/* <img src={mossGarden2} style={{ height: '70%', width: '70%' }} alt="Moss Garden" />; //{' '}
-// 		<img src={watergarden2} style={{ height: '70%', width: '70%' }} alt="Water Garden" />; //{' '}
-// 		<img src={portager2} style={{ height: '70%', width: '70%' }} alt="Portager" />; //{' '}
-// 		<img src={hummingbird2} style={{ height: '70%', width: '70%' }} alt="Hummingbird" />; //{' '}
-// 		<img src={miniTuscany} style={{ height: '70%', width: '70%' }} alt="Mini Tuscany" />; //{' '}
-// 		<img src={granada2} style={{ height: '70%', width: '70%' }} alt="Granada" />; */
-// }
