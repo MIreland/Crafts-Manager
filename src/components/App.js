@@ -4,8 +4,8 @@ import SearchBar from './search/SearchBar';
 import DmcList from './threads/DmcList';
 import { threads } from './threads/threads';
 import ThreadList from './threads/ThreadList';
-// import OtherPatterns from './patterns/OtherPatterns';
-// import ChatelainePatterns from './patterns/ChatelainePatterns';
+import OtherPatterns from './patterns/OtherPatterns';
+import ChatelainePatterns from './patterns/ChatelainePatterns';
 import SearchBox from './search/SearchBox';
 // import SearchedThread from './threads/SearchedThread';
 
@@ -38,11 +38,10 @@ class App extends React.Component {
 					<SearchBox onSearchChange={this.onSearchChange} />
 					<span> Your thread is: {this.state.searchfield}</span>
 				</div>
-				{/* <SearchedThread filteredThreads={filteredThreads} />
-				<ChatelainePatterns />
-				<OtherPatterns /> */}
 				<ThreadList threads={filteredThreads} />
 				<DmcList />
+				<ChatelainePatterns />
+				<OtherPatterns />
 			</div>
 		);
 	}
