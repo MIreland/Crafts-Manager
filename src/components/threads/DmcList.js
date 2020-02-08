@@ -424,7 +424,7 @@ const DmcList = (props) => {
 	];
 
 	threads = threads.map((thread, i) => {
-		return <ThreadItem key={i} dmc={threads[[ i ]].dmc} color={threads[i].color} rgb={threads[i].rgb} />;
+		return <ThreadItem key={i} dmc={threads[i].dmc} color={threads[i].color} rgb={threads[i].rgb} />;
 	});
 
 	return <div style={threadCardStyle}>{threads}</div>;

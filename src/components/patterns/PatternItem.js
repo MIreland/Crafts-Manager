@@ -7,7 +7,7 @@ const PatternItem = (props) => {
 				{props.name}
 				<span style={{ fontSize: '18px' }}>{`  -  ${props.by}`}</span>
 			</h2>
-			<img src={props.image} style={{ height: '75%', width: '75%' }} alt="pattern" />
+			<img src={props.image} style={{ height: '90%', width: '90%' }} alt="pattern" />
 		</div>
 	);
 };

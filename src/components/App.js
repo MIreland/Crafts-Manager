@@ -1,13 +1,8 @@
 import React from 'react';
-import SearchBar from './search/SearchBar';
-// import Search from './Search';
 import DmcList from './threads/DmcList';
-import { threads } from './threads/threads';
-import ThreadList from './threads/ThreadList';
-import OtherPatterns from './patterns/OtherPatterns';
-import ChatelainePatterns from './patterns/ChatelainePatterns';
+import Patterns from './patterns/Patterns';
 import SearchBox from './search/SearchBox';
-// import SearchedThread from './threads/SearchedThread';
+import Counter from './Counter';
 
 class App extends React.Component {
 	constructor() {
@@ -26,22 +21,22 @@ class App extends React.Component {
 		console.log(e.target.value);
 	};
 	render() {
-		const { threads, searchfield } = this.state;
-		const filteredThreads = threads.filter((thread) => {
-			return threads.color.toLowerCase().includes(searchfield.toLowerCase());
-		});
+		// const { threads, searchfield } = this.state;
+		// const filteredThreads = threads.filter((thread) => {
+		// 	return threads.color.toLowerCase().includes(searchfield.toLowerCase());
+		// });
 
 		return (
 			<div style={{ margin: '10px' }}>
-				<SearchBar />
+				<Counter />
 				<div style={{ textAlign: 'center', padding: '20px' }}>
 					<SearchBox onSearchChange={this.onSearchChange} />
 					<span> Your thread is: {this.state.searchfield}</span>
 				</div>
-				<ThreadList threads={filteredThreads} />
+				{/* <ThreadList threads={filteredThreads} /> */}
 				<DmcList />
-				<ChatelainePatterns />
-				<OtherPatterns />
+				<br />
+				<Patterns />
 			</div>
 		);
 	}

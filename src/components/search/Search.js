@@ -16,9 +16,7 @@ class Search extends React.Component {
 	render() {
 		return (
 			<div>
-				<form onSubmit={this.onFormSubmit} className="form">
-					{/* //onFormSubmt is a function /do not use onFormSubmit() 
-				because this will call the function every time the page is rendered */}
+				<form>					
 					<input
 						type="text"
 						name="text"
