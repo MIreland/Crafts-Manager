@@ -2,6 +2,7 @@ import React from 'react';
 
 const ThreadItem = (props) => {
 	return (
+		// Is this outer div needed?
 		<div>
 			<div className="ui cards">
 				<div className="card" style={{ backgroundColor: `rgb(${props.rgb})` }}>

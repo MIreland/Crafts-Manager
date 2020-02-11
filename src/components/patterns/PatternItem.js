@@ -1,13 +1,14 @@
 import React from 'react';
 
-const PatternItem = (props) => {
+// Here's an example of destructuring props
+const PatternItem = ({name, image, by}) => {
 	return (
 		<div style={{ border: '1px solid grey' }}>
 			<h2>
-				{props.name}
-				<span style={{ fontSize: '18px' }}>{`  -  ${props.by}`}</span>
+				{name}
+				<span style={{ fontSize: '18px' }}>{`  -  ${by}`}</span>
 			</h2>
-			<img src={props.image} style={{ height: '90%', width: '90%' }} alt="pattern" />
+			<img src={image} style={{ height: '90%', width: '90%' }} alt="pattern" />
 		</div>
 	);
 };

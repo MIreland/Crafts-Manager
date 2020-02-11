@@ -1,6 +1,7 @@
 import React from 'react';
 import ThreadItem from './ThreadItem';
 
+// Props is unnecessary. We could also move the list of threads to a util file.
 const DmcList = (props) => {
 	let threads = [
 		{ dmc: 3713, color: 'Salmon Very Light', rgb: [ 255, 226, 226 ] },
@@ -424,6 +425,7 @@ const DmcList = (props) => {
 	];
 
 	threads = threads.map((thread, i) => {
+		// We don't want to use `i` as a key- `dcm` would work great though.
 		return <ThreadItem key={i} dmc={threads[i].dmc} color={threads[i].color} rgb={threads[i].rgb} />;
 	});
 
